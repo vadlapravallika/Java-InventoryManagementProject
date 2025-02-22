@@ -1,0 +1,14 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+button {
+	-fx-background-color: rgba(109,171,60,0.5);
+	-fx-border-color : #6dab3c
+	
+}
+button:hover{
+	-fx-background-color: hotpink;
+	-fx-text-fill: black;
+	-fx-cursor: hand;
+}
+.sideNav{
+	-fx-background-color:  #DAC0A3;
+}

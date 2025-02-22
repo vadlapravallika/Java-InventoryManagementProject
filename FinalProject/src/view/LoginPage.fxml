@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.geometry.Point3D?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane focusTraversable="true" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="372.0" prefWidth="497.0" style="-fx-background-color: #BED7DC;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginPageController">
+   <children>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6dab3c" height="28.0" layoutX="167.0" layoutY="136.0" stroke="#6dab3c" strokeType="INSIDE" width="35.0" />
+      <Label alignment="CENTER" contentDisplay="CENTER" layoutX="176.0" layoutY="80.0" prefHeight="36.0" prefWidth="145.0" text="Login " textAlignment="CENTER" textOverrun="LEADING_WORD_ELLIPSIS" wrapText="true">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <PasswordField fx:id="password" layoutX="202.0" layoutY="173.0" prefHeight="25.0" prefWidth="139.0" promptText="Password" style="-fx-border-color: #6dab3c;">
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </PasswordField>
+      <ImageView fitHeight="25.0" fitWidth="29.0" layoutX="172.0" layoutY="138.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/icons8-user-30.png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="username" layoutX="202.0" layoutY="136.0" prefHeight="25.0" prefWidth="139.0" promptText="Username" style="-fx-border-color: #6dab3c;">
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+         <rotationAxis>
+            <Point3D />
+         </rotationAxis>
+         <cursor>
+            <Cursor fx:constant="DEFAULT" />
+         </cursor>
+      </TextField>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#6dab3c" height="28.0" layoutX="167.0" layoutY="173.0" stroke="#6dab3c" strokeType="INSIDE" width="35.0" />
+      <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="172.0" layoutY="175.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/icons8-password-48.png" />
+         </image>
+      </ImageView>
+      <Label layoutX="171.0" layoutY="268.0" prefHeight="17.0" prefWidth="131.0" text="Don't have an account?" />
+      <Hyperlink fx:id="signup" layoutX="302.0" layoutY="265.0" onAction="#onSignUpBtnClick" text="Sign Up" textFill="#6fab43">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font></Hyperlink>
+      <Button fx:id="signin" layoutX="228.0" layoutY="222.0" mnemonicParsing="false" onAction="#onSignInBtnClick" style="-fx-background-color: #6dab3c;" text="Login" textFill="WHITE" />
+   </children>
+   <effect>
+      <DropShadow blurType="TWO_PASS_BOX" height="11.27" radius="7.1825" width="19.46">
+         <color>
+            <Color red="1.0" green="1.0" blue="1.0" />
+         </color>
+      </DropShadow>
+   </effect>
+</AnchorPane>

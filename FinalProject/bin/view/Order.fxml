@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1250.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.OrderController">
+   <children>
+      <BorderPane layoutX="33.0" layoutY="40.0" prefHeight="550.0" prefWidth="807.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <AnchorPane prefHeight="30.0" prefWidth="800.0" style="-fx-background-color: #DAC0A3;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="337.0" prefHeight="25.333333333333332" prefWidth="1250.0" text="INVENTORY MANAGEMENT SYSTEM" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="Times New Roman" size="12.0" />
+                     </font>
+                  </Label>
+                  <Label alignment="CENTER" layoutX="757.0" layoutY="-1.0" prefHeight="21.0" prefWidth="34.0" />
+                  <Label layoutX="725.0" layoutY="-1.0" prefHeight="25.0" prefWidth="25.0" />
+               </children>
+            </AnchorPane>
+         </top>
+         <left>
+            <AnchorPane prefHeight="523.0" prefWidth="182.0" style="-fx-background-color: #E5DDC5;" BorderPane.alignment="CENTER">
+               <children>
+                  <Label alignment="CENTER" layoutX="10.0" prefHeight="35.0" prefWidth="181.0" text="MENU NAVIGATION" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <Button fx:id="btnDash" layoutX="10.0" layoutY="42.0" mnemonicParsing="false" onAction="#onDashBtnClick" prefHeight="30.0" prefWidth="157.0" styleClass="btn" stylesheets="@Dashboard.css" text="Dashboard" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <Button fx:id="btnCategory" layoutX="10.0" layoutY="94.0" mnemonicParsing="false" onAction="#onCategoryBtnClick" prefHeight="25.0" prefWidth="157.0" styleClass="btn" stylesheets="@Dashboard.css" text="Category" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <Button fx:id="btnProduct" layoutX="10.0" layoutY="141.0" mnemonicParsing="false" onAction="#onProductBtnClick" prefHeight="25.0" prefWidth="157.0" styleClass="btn" stylesheets="@Dashboard.css" text="Product" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <Button fx:id="btnCustomer" layoutX="10.0" layoutY="190.0" mnemonicParsing="false" onAction="#onCustomerBtnClick" prefHeight="25.0" prefWidth="157.0" styleClass="btn" stylesheets="@Dashboard.css" text="Customer" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <Button fx:id="btnOrder" layoutX="10.0" layoutY="238.0" mnemonicParsing="false" onAction="#onOrderBtnClick" prefHeight="25.0" prefWidth="157.0" styleClass="btn" stylesheets="@Dashboard.css" text="Order" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <Button fx:id="btnViewOrder" layoutX="10.0" layoutY="287.0" mnemonicParsing="false" onAction="#onViewOrderBtnClick" prefHeight="25.0" prefWidth="157.0" styleClass="btn" stylesheets="@Dashboard.css" text="View Order" textFill="WHITE" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" />
+                  <Button fx:id="btnLogout" layoutX="6.0" layoutY="491.0" mnemonicParsing="false" onAction="#onLogoutBtnClick" prefHeight="25.0" prefWidth="170.0" style="-fx-background-color: #6dab3c;" text="Logout" textFill="WHITE" />
+               </children>
+            </AnchorPane>
+         </left>
+         <center>
+            <AnchorPane prefHeight="525.0" prefWidth="602.0" style="-fx-background-color: #BED7DC;" styleClass="shadow" stylesheets="@Dashboard.css" BorderPane.alignment="CENTER">
+               <children>
+                  <AnchorPane layoutX="20.0" layoutY="20.0" prefHeight="434.0" prefWidth="541.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+                     <children>
+                        <Label alignment="CENTER" layoutX="444.0" layoutY="8.0" prefHeight="35.0" prefWidth="140.0" text="MANAGE ORDER">
+                           <font>
+                              <Font name="System Bold" size="14.0" />
+                           </font>
+                        </Label>
+                        <TableView fx:id="tCustomer" editable="true" fixedCellSize="0.0" layoutX="24.0" layoutY="93.0" onMouseClicked="#handleOnMouseclick" prefHeight="199.0" prefWidth="275.0">
+                           <columns>
+                              <TableColumn fx:id="colId" prefWidth="36.66670227050781" text="Id" />
+                              <TableColumn fx:id="colName" prefWidth="76.0" text="Name" />
+                              <TableColumn fx:id="colMbl" prefWidth="73.33328247070312" text="Contact Number" />
+                              <TableColumn fx:id="colEmail" prefWidth="87.33331298828125" text="Email" />
+                           </columns>
+                        </TableView>
+                        <Text layoutX="26.0" layoutY="398.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Name:" wrappingWidth="48.13665771484375" />
+                        <TextField fx:id="tfName" layoutX="87.0" layoutY="381.0" />
+                        <Text layoutX="24.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id:" wrappingWidth="26.861328125" />
+                        <TextField fx:id="tfId" layoutX="88.0" layoutY="338.0" prefHeight="25.0" prefWidth="147.0" />
+                        <Text layoutX="23.0" layoutY="441.0" strokeType="OUTSIDE" strokeWidth="0.0" text="MobileNo:" wrappingWidth="92.86135864257812" />
+                        <TextField fx:id="tfMbl" layoutX="87.0" layoutY="424.0" prefHeight="25.0" prefWidth="149.0" />
+                        <Text layoutX="23.0" layoutY="485.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Email:" wrappingWidth="92.86135864257812" />
+                        <TextField fx:id="tfEmail" layoutX="83.0" layoutY="467.0" prefHeight="25.0" prefWidth="157.0" />
+                        <Label layoutX="23.0" layoutY="303.0" prefHeight="17.0" prefWidth="146.0" text="Selected Customer:" />
+                        <Label layoutX="122.0" layoutY="55.0" prefHeight="17.0" prefWidth="94.0" text="CUSTOMER LIST">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <TableView fx:id="tProduct" layoutX="316.0" layoutY="93.0" onMouseClicked="#handleOnMouseClick" prefHeight="200.0" prefWidth="347.0">
+                           <columns>
+                              <TableColumn fx:id="colProductId" prefWidth="31.999969482421875" text="Id" />
+                              <TableColumn fx:id="colProductName" prefWidth="70.0" text="Name" />
+                              <TableColumn fx:id="colQty" prefWidth="56.6666259765625" text="Quantity" />
+                              <TableColumn fx:id="colPrice" prefWidth="59.33331298828125" text="Price" />
+                              <TableColumn fx:id="colDesc" prefWidth="70.66668701171875" text="Description" />
+                              <TableColumn fx:id="colCategory" prefWidth="58.6666259765625" text="Category" />
+                           </columns>
+                        </TableView>
+                        <Text layoutX="337.0" layoutY="380.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Name:" wrappingWidth="103.47003173828125" />
+                        <TextField fx:id="tfProductName" layoutX="466.0" layoutY="363.0" />
+                        <Text layoutX="338.0" layoutY="423.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Price:" wrappingWidth="78.13671875" />
+                        <TextField fx:id="tfPrice" layoutX="466.0" layoutY="405.0" />
+                        <Text layoutX="337.0" layoutY="466.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Description:" wrappingWidth="115.47003173828125" />
+                        <TextField fx:id="tfDesc" layoutX="466.0" layoutY="449.0" />
+                        <Text layoutX="338.0" layoutY="504.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Order Quantity:" wrappingWidth="114.13665771484375" />
+                        <TextField fx:id="tfOrderQty" layoutX="466.0" layoutY="487.0" />
+                        <TableView fx:id="tCart" layoutX="677.0" layoutY="93.0" onMouseClicked="#handleRowDel" prefHeight="200.0" prefWidth="339.0">
+                          <columns>
+                            <TableColumn fx:id="cartId" prefWidth="49.33331298828125" text="Id" />
+                            <TableColumn fx:id="cartName" prefWidth="58.0" text="Name" />
+                              <TableColumn fx:id="cardQty" prefWidth="60.6666259765625" text="Quantity" />
+                              <TableColumn fx:id="cartPrice" prefWidth="61.333251953125" text="Price" />
+                              <TableColumn fx:id="cartDesc" prefWidth="52.6666259765625" text="Desc" />
+                              <TableColumn fx:id="cartSubTotal" prefWidth="55.999959309895814" text="Sub Total" />
+                          </columns>
+                        </TableView>
+                        <Text layoutX="779.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Total Amonut: $" wrappingWidth="120.803466796875" />
+                        <Text fx:id="tfTotalAmount" layoutX="866.0" layoutY="332.0" strokeType="OUTSIDE" strokeWidth="0.0" text="0" wrappingWidth="93.8021240234375" />
+                        <Button fx:id="btnAddToCart" layoutX="773.0" layoutY="350.0" mnemonicParsing="false" onAction="#onAddToCartBtnClick" prefHeight="25.0" prefWidth="174.0" text="Add To Cart" textFill="WHITE" />
+                        <Button fx:id="btnSave" layoutX="771.0" layoutY="393.0" mnemonicParsing="false" onAction="#onSaveBtnClick" prefHeight="25.0" prefWidth="177.0" text="Pay &amp; Save Order Details" textFill="WHITE" />
+                        <Button fx:id="btnReset" layoutX="772.0" layoutY="436.0" mnemonicParsing="false" onAction="#onResetBtnClick" prefHeight="25.0" prefWidth="177.0" text="Reset" textFill="WHITE" />
+                        <Label layoutX="318.0" layoutY="303.0" prefHeight="17.0" prefWidth="169.0" text="Selected Product:" />
+                        <Label layoutX="466.0" layoutY="55.0" prefHeight="17.0" prefWidth="124.0" text="PRODUCT LIST">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Label layoutX="826.0" layoutY="55.0" prefHeight="17.0" prefWidth="80.0" text="CART LIST">
+                           <font>
+                              <Font name="System Bold" size="12.0" />
+                           </font></Label>
+                        <Text layoutX="335.0" layoutY="341.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Product Id:" wrappingWidth="84.13671875" />
+                        <TextField fx:id="tfProductId" layoutX="466.0" layoutY="323.0" />
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>
