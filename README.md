@@ -104,7 +104,7 @@ CREATE TABLE im_orderdetails (
     date DATE NOT NULL,
     total_paid DECIMAL(10, 2) NOT NULL
 );
-
+```
 3. Insert sample data into the tables if needed.
 
 
@@ -127,7 +127,7 @@ public class DBConnection {
         return conn;
     }
 }
-
+```
 
 ### 3. **Running the Application**
 
@@ -172,8 +172,7 @@ InventoryManagementSystem/
 ├── lib/                     # External libraries (JavaFX, MySQL Connector)
 ├── screenshots/             # Screenshots of the application
 ├── README.md                # Project documentation
-
-
+```
 
 ## Conclusion
 
