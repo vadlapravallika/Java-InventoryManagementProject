@@ -1,13 +1,7 @@
-# Java-InventoryManagementSystem Project
-Below is a **README.md** file that you can add to your GitHub repository for the **Inventory Management System** project. This README provides an overview of the project, its features, technologies used, and instructions for setting up and running the application.
-
----
-
 # Inventory Management System
 
 The **Inventory Management System** is a JavaFX-based application designed to help administrators manage categories, products, customers, and orders efficiently. The system follows the **MVC (Model-View-Controller)** architecture, ensuring modularity and ease of maintenance. It provides functionalities such as user authentication, CRUD operations for categories, products, and customers, and bill generation for orders.
 
----
 
 ## Features
 
@@ -40,8 +34,6 @@ The **Inventory Management System** is a JavaFX-based application designed to he
   - View orders placed by customers.
   - Open PDF bills for specific orders.
 
----
-
 ## Technologies Used
 
 - **Front End**: JavaFX
@@ -50,8 +42,6 @@ The **Inventory Management System** is a JavaFX-based application designed to he
   - Eclipse IDE
   - JavaFX Scene Builder
   - MySQL Workbench
-
----
 
 ## Prerequisites
 
@@ -62,8 +52,6 @@ Before running the application, ensure you have the following installed:
 3. **JavaFX SDK**: For building the user interface.
 4. **Eclipse IDE** (optional): For development and running the application.
 5. **MySQL Connector/J**: JDBC driver for connecting Java with MySQL.
-
----
 
 ## Setup Instructions
 
@@ -116,11 +104,9 @@ CREATE TABLE im_orderdetails (
     date DATE NOT NULL,
     total_paid DECIMAL(10, 2) NOT NULL
 );
-```
 
 3. Insert sample data into the tables if needed.
 
----
 
 ### 2. **Project Setup**
 
@@ -141,9 +127,7 @@ public class DBConnection {
         return conn;
     }
 }
-```
 
----
 
 ### 3. **Running the Application**
 
@@ -154,7 +138,6 @@ public class DBConnection {
    - **Password**: `admin`
 4. Alternatively, you can create a new account using the **Sign Up** option.
 
----
 
 ## Screenshots
 
@@ -174,7 +157,7 @@ public class DBConnection {
 ### Order Management
 ![Order Management]![image](https://github.com/user-attachments/assets/b65d3a41-4b09-449e-ab77-1560bb2a6f4f)
 
----
+
 
 ## Project Structure
 
@@ -189,28 +172,25 @@ InventoryManagementSystem/
 ├── lib/                     # External libraries (JavaFX, MySQL Connector)
 ├── screenshots/             # Screenshots of the application
 ├── README.md                # Project documentation
-```
 
----
+
 
 ## Conclusion
 
 The **Inventory Management System** is a robust and user-friendly application designed to streamline inventory management for businesses. It provides a comprehensive set of features for managing categories, products, customers, and orders, along with secure user authentication and bill generation.
 
----
 
 ## License
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 
----
+
 
 ## Author
 
 - **Pravallika Vadla**
-- GitHub: [Your GitHub Profile](https://github.com/yourusername)
+- GitHub: [Your GitHub Profile](https://github.com/vadlapravallika)
 - Email: pravalli541@gmail.com
 
----
 
 Feel free to contribute to the project by submitting issues or pull requests. For any questions or feedback, please contact the author.
